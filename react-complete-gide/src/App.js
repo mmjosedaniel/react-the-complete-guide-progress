@@ -75,8 +75,8 @@ class App extends Component {
               My hobbies: Racing
             </Person>
             <Person
-              name={this.state.persons[2].name}
-              age={this.state.persons[2].age}
+              name={this.state.persons[1].name}
+              age={this.state.persons[1].age}
             />
           </div> :
           null
