@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import person from './Person/Person';
 import Person from './Person/Person'
 
 class App extends Component {
@@ -25,7 +24,8 @@ class App extends Component {
   }
 
   deletePersonHandler = (personIndex) => {
-    const persons = this.state.persons;
+    // const persons = this.state.persons.slice();
+    const persons = [...this.state.persons];
     persons.splice(personIndex, 1);
     this.setState({persons: persons});
   }
