@@ -1,4 +1,4 @@
-.Person {
+/* .Person {
     width: 60%;
     margin: 16px auto;
     border: 1px solid #eee;
@@ -7,15 +7,7 @@
     text-align: center;
 }
 
-.red {
-    color: red;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-/* @media (min-width: 500px) {
+@media (min-width: 500px) {
     .Person {
         width: 45px;
     }
