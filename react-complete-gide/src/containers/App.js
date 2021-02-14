@@ -26,9 +26,9 @@ class App extends Component {
   };
 
   // Will be removed [deprecated]
-  componentWillMount(){
-    console.log('[App.js] componentWillMonut');
-  }
+  // componentWillMount(){
+  //   console.log('[App.js] componentWillMonut');
+  // }
 
   componentDidMount(){
     console.log('[App.js] componentDidMount');
