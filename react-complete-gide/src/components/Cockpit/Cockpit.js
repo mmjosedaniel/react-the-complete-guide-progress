@@ -3,12 +3,24 @@ import React, { useEffect } from "react";
 import classes from "./Cockpit.css";
 
 const cockpit = (props) => {
+  // useEffect(() => {
+  //   console.log('[Cockpit.js] useEffect');
+  //   //HTTP request...
+  //   setTimeout(() => {
+  //     alert('Saved data tocloud!');
+  //   }, 1000);
+  // }, [props.persons, a, b...]);
+
+  // componentDidMount ==
   useEffect(() => {
     console.log('[Cockpit.js] useEffect');
+    //HTTP request...
+    setTimeout(() => {
+      alert('Saved data tocloud!');
+    }, 1000);
+  }, []);
 
-    //HTTP request..
-  });
-
+  // useEffect();
   const assignedClasses = [];
   let btnClass = "";
   if (props.showPersons) {
