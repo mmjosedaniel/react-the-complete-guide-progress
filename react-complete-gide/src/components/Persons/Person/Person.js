@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 import Aux from "../../../hoc/Aux";
+import withClass from "../../../hoc/withClass";
 
 import classes from "./Person.css";
 
@@ -33,4 +34,4 @@ Person.propTypes = {
   changed: PropTypes.func,
 };
 
-export default Person;
+export default withClass(Person, classes.Person);
