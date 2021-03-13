@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route } from "react-router-dom";
+import { Route, NavLink } from "react-router-dom";
 
 
 import Courses from './containers/Courses/Courses';
@@ -19,6 +19,16 @@ class App extends Component {
           <li>Add a 404 error page and render it for any unknown routes</li>
           <li>Redirect requests to /all-courses to /courses (=> Your "Courses" page)</li>
         </ol>
+        <nav>
+          <ul>
+            <li>
+              <NavLink to="/courses">COURSES</NavLink>
+            </li>
+            <li>
+              <NavLink to="/users">USERS</NavLink>
+            </li>
+          </ul>
+        </nav>
         <Route path="/courses" component={Courses} />
         <Route path="/users" component={Users} />
       </div>
