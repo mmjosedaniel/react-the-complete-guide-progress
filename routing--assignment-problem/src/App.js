@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, NavLink } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 
 
 import Courses from './containers/Courses/Courses';
@@ -20,12 +20,12 @@ class App extends Component {
           <li>Redirect requests to /all-courses to /courses (=> Your "Courses" page)</li>
         </ol>
         <nav>
-          <ul>
-            <li>
-              <NavLink to="/courses">COURSES</NavLink>
+          <ul style={{listStyle: "none", margin: "auto", padding: "0"}}>
+            <li style={{margin: "10px", display: "inline-block"}}>
+              <Link to="/courses">COURSES</Link>
             </li>
-            <li>
-              <NavLink to="/users">USERS</NavLink>
+            <li style={{margin: "10px", display: "inline-block"}}>
+              <Link to="/users">USERS</Link>
             </li>
           </ul>
         </nav>
