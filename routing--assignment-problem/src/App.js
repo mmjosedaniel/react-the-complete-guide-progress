@@ -34,6 +34,7 @@ class App extends Component {
         <Route path="/users" component={Users} />
         {/* <Route path="/courses/:courseId" component={Course} /> */}
         <Route path="/courses" component={Courses} />
+        <Route path="/"><h2>Error 404</h2></Route>
         </Switch>
       </div>
     );
