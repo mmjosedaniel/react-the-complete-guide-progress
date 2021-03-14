@@ -22,7 +22,7 @@ class Courses extends Component {
             return (
               <Link
                 style={{ textDecoration: "none" }}
-                to={this.props.match.url + "/course"}
+                to={this.props.match.url + "/" + course.id}
                 key={course.id}
               >
                 <article className="Course">{course.title}</article>
@@ -30,7 +30,6 @@ class Courses extends Component {
             );
           })}
         </section>
-        <Route path="/course/:id" component={Course} />
       </div>
     );
   }
