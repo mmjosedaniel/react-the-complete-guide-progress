@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import "./Courses.css";
-import Course from "../Course/Course";
 
 class Courses extends Component {
   state = {
@@ -22,7 +21,7 @@ class Courses extends Component {
             return (
               <Link
                 style={{ textDecoration: "none" }}
-                to={this.props.match.url + "/" + course.id}
+                to={this.props.match.url + "/" + course.id + course.title}
                 key={course.id}
               >
                 <article className="Course">{course.title}</article>
