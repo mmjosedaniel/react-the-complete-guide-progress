@@ -3,8 +3,8 @@ import { Route, Link, Switch } from "react-router-dom";
 
 
 import Courses from './containers/Courses/Courses';
-import Course from "./containers/Course/Course"
 import Users from './containers/Users/Users';
+import NoMatch from "./component/NoMatch/NoMatch";
 
 class App extends Component {
   render () {
@@ -34,7 +34,7 @@ class App extends Component {
         <Route path="/users" component={Users} />
         {/* <Route path="/courses/:courseId" component={Course} /> */}
         <Route path="/courses" component={Courses} />
-        <Route path="/"><h2>Error 404</h2></Route>
+        <Route component={NoMatch}/>
         </Switch>
       </div>
     );
