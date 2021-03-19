@@ -49,10 +49,10 @@ class ContactData extends Component {
         },
         value: "",
       },
-      deliberyMethod: {
+      deliveryMethod: {
         elementType: "select",
         elementConfig: {
-          option: [
+          options: [
             { value: "fastest", displayValue: "Fastest" },
             { value: "cheapest", displayValue: "Cheapest" },
           ],
@@ -96,7 +96,7 @@ class ContactData extends Component {
         {formElementsArray.map((formElement) => (
           <Input
             key={formElement.id}
-            elementTipe={formElement.config.elementType}
+            elementType={formElement.config.elementType}
             elementConfig={formElement.config.elementConfig}
             value={formElement.config.value}
           />
