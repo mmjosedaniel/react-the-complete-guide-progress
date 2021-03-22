@@ -1,9 +1,14 @@
 const initialState = {
-    counter: 0
-}
+  counter: 0,
+};
 
 const reducer = (state = initialState, action) => {
-    return state;
+  if (action.type === "INCREMENT") {
+    return {
+      counter: state.counter + 1,
+    };
+  }
+  return state;
 };
 
 export default reducer;
