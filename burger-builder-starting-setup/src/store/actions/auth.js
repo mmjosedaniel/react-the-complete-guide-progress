@@ -43,7 +43,7 @@ export const auth = (email, password, isSignup) => {
     const authData = {
       email: email,
       password: password,
-      retunSecureToken: true,
+      returnSecureToken: true,
     };
     let url =
       "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBeUNOrAv94VUUGRYOvrknoHQfgQNxldUg";
@@ -57,9 +57,7 @@ export const auth = (email, password, isSignup) => {
       .then((response) => {
         console.log(response);
         dispatch(authSuccess(response.data.idToken, response.data.localId));
-        // expiresIn is not comig in teh respunce, the I harcoded it.
-        // dispatch(checkAuthTimeout(response.data.expiresIn));
-        dispatch(checkAuthTimeout("3600"));
+        dispatch(checkAuthTimeout(response.data.expiresIn));
       })
       .catch((err) => {
         dispatch(authFail(err.response.data.error));
