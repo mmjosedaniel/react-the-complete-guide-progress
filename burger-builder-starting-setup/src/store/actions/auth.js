@@ -23,6 +23,20 @@ export const authFail = (error) => {
   };
 };
 
+export const logout = () => {
+  return {
+    type: actionTypes.AUTH_LOGOUT,
+  };
+};
+
+export const checkAuthTimeout = (expirationTime) => {
+  return (dispatch) => {
+    setTimeout(() => {
+      dispatch(logout());
+    }, expirationTime * 1000);
+  };
+};
+
 export const auth = (email, password, isSignup) => {
   return (dispatch) => {
     dispatch(authStart());
@@ -43,6 +57,9 @@ export const auth = (email, password, isSignup) => {
       .then((response) => {
         console.log(response);
         dispatch(authSuccess(response.data.idToken, response.data.localId));
+        // expiresIn is not comig in teh respunce, the I harcoded it.
+        // dispatch(checkAuthTimeout(response.data.expiresIn));
+        dispatch(checkAuthTimeout("3600"));
       })
       .catch((err) => {
         dispatch(authFail(err.response.data.error));
